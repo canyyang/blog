@@ -4,11 +4,11 @@ module.exports = {
         name: 'blog', // 项目名称
         script: 'react-admin-server.js',
         env: {
-          PORT: 5021
+          PORT: 1212
         },
         env_production: {
           NODE_ENV: "production",
-          PORT: 5021
+          PORT: 1212
         }
       },
     ],
