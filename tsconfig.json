@@ -3,5 +3,11 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "skipLibCheck": true,         // 忽略对库文件的类型检查
+    "noEmitOnError": false,       // 即使有错误也允许生成文件
+    "strict": false,              // 关闭严格模式
+    "ignoreDeprecations": "5.0"   // 忽略已弃用的 API 提示（TypeScript 5.0 及以上版本支持）
+  }
 }

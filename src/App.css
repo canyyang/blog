@@ -1,0 +1,13 @@
+body, html {
+    /* overflow: hidden; */
+    font-family: "FZLanTingHei", "Microsoft YaHei", sans-serif;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: WitchParty;
+    src: url('/fonts/WitchParty.ttf');
+}
