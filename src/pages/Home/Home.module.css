@@ -1,234 +1,489 @@
-.container {
-    position: relative;
+@media only screen and (min-width: 768px) {
+    .container {
+        position: relative;
+    }
+
+    .fixbox {
+        position: fixed;
+        left: 0;
+        width: 30vw;
+        min-width: 350px;
+    }
+
+    .record {
+        color: #E0E0E0;
+    }
+
+    .record:hover {
+        color: #BEBEBE;
+    }
+
+    .leftbox {
+        margin-top: 100px;
+        width: 30vw;
+        min-width: 350px;
+        cursor: default;
+        width: 400px;
+        height: 200px;
+    }
+
+    .rightbox {
+        margin-top: 40px;
+        width: 70vw;
+        min-width: 880px;
+        padding-bottom: 20px;
+    }
+
+    .logo {
+        margin-bottom: 30px;
+        width: 200px;
+        height: 200px;
+        border-radius: 40%;
+    }
+
+    .name {
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    .slogan {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 40px;
+        font-family: WitchParty;
+    }
+
+    .tagList {
+        width: 300px;
+    }
+
+    .tag {
+        color: rbga(0,0,0,.6);
+        background-color: #f2f2f2;
+        cursor: default;
+    }
+
+    .tag:hover {
+        font-weight: 600;
+        background-color: #e5e5e5 !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .card {
+        margin-top: 40px;
+        border: 0.5px solid #e6e6e6;
+        border-radius: 8px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        background-color: #f9f9f9;
+    }
+
+    .card:hover {
+        box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+
+    .intro-title {
+        margin-bottom: 8px;
+        font-family: SimHei;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .intro-context {
+        margin-bottom: 40px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .left-card {
+        font-family: FangSong;
+        background-image: url(/imgs/black1.png);
+        background-size: 400px 200px;
+        color: #ffffff;
+    }
+
+    .left-card:hover {
+        background-image: url(/imgs/black2.png);
+        background-size: 400px 200px;
+    }
+
+    .left-button {
+        font-family: SimHei;
+        font-weight: 600;
+        background-color: #F0F0F0;
+        color: #000000;
+    }
+
+    .left-button:hover {
+        background-color: #B0B0B0 !important;
+    }
+
+    .right-card {
+        background-image: url(/imgs/white1.png);
+        background-size: 400px 200px;
+        font-family: Microsoft YaHei;
+    }
+
+    .right-card:hover {
+        background-image: url(/imgs/white2.png);
+        background-size: 400px 200px;
+    }
+
+    .right-button {
+        font-family: SimHei;
+        color: white;
+        font-weight: 600;
+        background-color: #181717;
+    }
+
+    .right-button:hover {
+        color: white !important;
+        background-color: #5C5C5C !important;
+    }
+
+    .card-title {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Fangzheng Cartoon, SimHei;
+        background-color: #e3e8ef;
+    }
+
+    .item {
+        width: 400px;
+        height: 200px;
+        margin-top: 40px;
+        border: 0.5px solid #e6e6e6;
+        border-radius: 8px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        color: #ffffff;
+        background-size:  400px 200px;
+    }
+
+    .item:hover {
+        box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+
+    .first-item {
+        background-image: url(/imgs/green1.jpg);
+    }
+
+    .first-item:hover {
+        background-image: url(/imgs/green2.png);
+        background-size: 400px 200px;
+    }
+
+    .blog {
+        padding: 0 30px;
+        margin-top: 12px;
+        height: 60px;
+        border-radius: 7px;
+        font-size: 18px;
+        font-weight: 600;
+        background-color: #e6e6e6;
+    }
+
+    .blog-title {
+        font-family: SimHei;
+    }
+
+    .blog-time {
+        font-family: Roboto;
+        color: #6b7280;
+    }
+
+    .blog-more {
+        margin-top: 12px;
+    }
+
+    .more {
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 7px;
+        font-size: 18px;
+        font-weight: 900;
+        background-color: #e6e6e6;
+    }
+
+    .contact {
+        margin-top: 23px;
+        padding-left: 24px;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        width: 400px;
+        height: 90px;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: Microsoft YaHei;
+    }
+
+    .contact:hover {
+        background-color: #f3f4f6;
+    }
+
+    .contact-img {
+        display: inline-block;
+        background-image: url(/imgs/icons.png);
+        background-size: 64px 32px;
+        width: 32px;
+        height: 32px;
+        margin-right: 6.6px;
+    }
 }
 
-.fixbox {
-    position: fixed;
-    left: 0;
-    width: 30vw;
-    min-width: 350px;
-}
+@media only screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
 
-.record {
-    color: #E0E0E0;
-}
+    .fixbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo {
+        margin-top: 10vw;
+        width: 50vw;
+        height: 50vw;
+        border-radius: 40%;
+    }
 
-.record:hover {
-    color: #BEBEBE;
-}
+    .name {
+        font-weight: 700;
+        font-size: 40px;
+    }
 
-.leftbox {
-    margin-top: 100px;
-    width: 30vw;
-    min-width: 350px;
-    height: 100vh;
-    cursor: default;
-}
+    .slogan {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 40px;
+        font-family: WitchParty;
+    }
 
-.rightbox {
-    margin-top: 40px;
-    width: 70vw;
-    min-width: 880px;
-    height: 100vh;
-}
+    .tagList {
+        width: 300px;
+    }
 
-.logo {
-    margin-bottom: 30px;
-    width: 200px;
-    height: 200px;
-    border-radius: 40%;
-}
+    .tag {
+        color: rbga(0,0,0,.6);
+        background-color: #f2f2f2;
+        cursor: default;
+    }
 
-.name {
-    font-weight: 700;
-    font-size: 40px;
-}
-
-.slogan {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    font-size: 40px;
-    font-family: WitchParty;
-}
-
-.tagList {
-    width: 300px;
-}
-
-.tag {
-    color: rbga(0,0,0,.6);
-    background-color: #f2f2f2;
-    cursor: default;
-}
-
-.tag:hover {
-    font-weight: 600;
-    background-color: #e5e5e5 !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
+    .tag:hover {
+        font-weight: 600;
+        background-color: #e5e5e5 !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
 
 
-.card {
-    margin-top: 40px;
-    border: 0.5px solid #e6e6e6;
-    border-radius: 8px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    background-color: #f9f9f9;
-}
+    .record {
+        color: #E0E0E0;
+    }
 
-.card:hover {
-    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
+    .record:hover {
+        color: #BEBEBE;
+    }
 
-.intro-title {
-    margin-bottom: 8px;
-    font-family: SimHei;
-    font-size: 20px;
-    font-weight: bold;
-}
+    .leftbox {
+        margin-top: 100px;
+        width: 30vw;
+        min-width: 350px;
+        cursor: default;
+    }
 
-.intro-context {
-    margin-bottom: 40px;
-    font-size: 18px;
-    font-weight: 600;
-}
+    .rightbox {
+        width: 100vw;
+        padding-bottom: 20px;
+    }
 
-.left-card {
-    font-family: FangSong;
-    background-image: url(/imgs/black1.png);
-    background-size: 400px 200px;
-    color: #ffffff;
-}
+    .card {
+        margin-top: 7vw;
+        border: 0.5px solid #e6e6e6;
+        border-radius: 8px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        background-color: #f9f9f9;
+    }
 
-.left-card:hover {
-    background-image: url(/imgs/black2.png);
-    background-size: 400px 200px;
-}
+    .card:hover {
+        box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
 
-.left-button {
-    font-family: SimHei;
-    font-weight: 600;
-    background-color: #F0F0F0;
-    color: #000000;
-}
+    .intro-title {
+        margin-bottom: 8px;
+        font-family: SimHei;
+        font-size: 20px;
+        font-weight: bold;
+    }
 
-.left-button:hover {
-    background-color: #B0B0B0 !important;
-}
+    .intro-context {
+        margin-bottom: 40px;
+        font-size: 18px;
+        font-weight: 600;
+    }
 
-.right-card {
-    background-image: url(/imgs/white1.png);
-    background-size: 400px 200px;
-    font-family: Microsoft YaHei;
-}
+    .left-card {
+        font-family: FangSong;
+        background-image: url(/imgs/black1.png);
+        background-size: 400px 200px;
+        color: #ffffff;
+        width: 94vw;
+        height: 47vw;
+    }
 
-.right-card:hover {
-    background-image: url(/imgs/white2.png);
-    background-size: 400px 200px;
-}
+    .left-card:hover {
+        background-image: url(/imgs/black2.png);
+        background-size: 94vw 47vw;
+    }
 
-.right-button {
-    font-family: SimHei;
-    color: white;
-    font-weight: 600;
-    background-color: #181717;
-}
+    .left-button {
+        font-family: SimHei;
+        font-weight: 600;
+        background-color: #F0F0F0;
+        color: #000000;
+    }
 
-.right-button:hover {
-    color: white !important;
-    background-color: #5C5C5C !important;
-}
+    .left-button:hover {
+        background-color: #B0B0B0 !important;
+    }
 
-.card-title {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: Fangzheng Cartoon, SimHei;
-    background-color: #e3e8ef;
-}
+    .right-card {
+        width: 94vw;
+        height: 47vw;
+        background-image: url(/imgs/white1.png);
+        background-size: 400px 200px;
+        font-family: Microsoft YaHei;
+    }
 
-.item {
-    width: 400px;
-    height: 200px;
-    margin-top: 40px;
-    border: 0.5px solid #e6e6e6;
-    border-radius: 8px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    color: #ffffff;
-    background-size:  400px 200px;
-}
+    .right-card:hover {
+        background-image: url(/imgs/white2.png);
+        background-size: 94vw 47vw;
+    }
 
-.item:hover {
-    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
+    .right-button {
+        font-family: SimHei;
+        color: white;
+        font-weight: 600;
+        background-color: #181717;
+    }
 
-.first-item {
-    background-image: url(/imgs/green1.jpg);
-}
+    .right-button:hover {
+        color: white !important;
+        background-color: #5C5C5C !important;
+    }
 
-.first-item:hover {
-    background-image: url(/imgs/green2.png);
-    background-size: 400px 200px;
-}
+    .card-title {
+        display: flex;
+        align-items: center;
+        height: 16vw;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Fangzheng Cartoon, SimHei;
+        background-color: #e3e8ef;
+    }
 
-.blog {
-    padding: 0 30px;
-    margin-top: 12px;
-    height: 60px;
-    border-radius: 7px;
-    font-size: 18px;
-    font-weight: 600;
-    background-color: #e6e6e6;
-}
+    .item {
+        width: 94vw;
+        height: 47vw;
+        margin-top: 40px;
+        border: 0.5px solid #e6e6e6;
+        border-radius: 8px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        color: #ffffff;
+        background-size:  94vw 47vw;
+    }
 
-.blog-title {
-    font-family: SimHei;
-}
+    .item:hover {
+        box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
 
-.blog-time {
-    font-family: Roboto;
-    color: #6b7280;
-}
+    .first-item {
+        background-image: url(/imgs/green1.jpg);
+    }
 
-.blog-more {
-    margin-top: 12px;
-}
+    .first-item:hover {
+        background-image: url(/imgs/green2.png);
+        background-size: 94vw 47vw;
+    }
 
-.more {
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 7px;
-    font-size: 18px;
-    font-weight: 900;
-    background-color: #e6e6e6;
-}
+    .blog {
+        padding: 2vw 4vw;
+        margin-top: 4vw;
+        height: 24vw;
+        border-radius: 7px;
+        font-size: 18px;
+        font-weight: 600;
+        background-color: #e6e6e6;
+    }
 
-.contact {
-    padding-left: 24px;
-    display: flex;
-    align-items: center;
-    border-radius: 8px;
-    width: 400px;
-    height: 90px;
-    font-size: 18px;
-    font-weight: bold;
-    font-family: Microsoft YaHei;
-}
+    .blog-title {
+        display: block;
+        height: 10vw;
+        line-height: 10vw;
+        font-family: SimHei;
+    }
 
-.contact:hover {
-    background-color: #f3f4f6;
-}
+    .blog-time {
+        display: block;
+        height: 10vw;
+        line-height: 10vw;
+        text-align: right;
+        font-family: Roboto;
+        color: #6b7280;
+    }
 
-.contact-img {
-    display: inline-block;
-    background-image: url(/imgs/icons.png);
-    background-size: 64px 32px;
-    width: 32px;
-    height: 32px;
-    margin-right: 6.6px;
+    .blog-more {
+        margin-top: 12px;
+    }
+
+    .more {
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 7px;
+        font-size: 18px;
+        font-weight: 900;
+        background-color: #e6e6e6;
+    }
+
+    .contact {
+        margin-top: 4vw;
+        padding-left: 24px;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        width: 94vw;
+        height: 16vw;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: Microsoft YaHei;
+    }
+
+    .contact:hover {
+        background-color: #f3f4f6;
+    }
+
+    .contact-img {
+        display: inline-block;
+        background-image: url(/imgs/icons.png);
+        background-size: 64px 32px;
+        width: 32px;
+        height: 32px;
+        margin-right: 6.6px;
+    }
 }

@@ -1,6 +1,7 @@
 body, html {
-    /* overflow: hidden; */
     font-family: "FZLanTingHei", "Microsoft YaHei", sans-serif;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 div {
