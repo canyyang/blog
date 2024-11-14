@@ -97,13 +97,13 @@
 
 .left-card {
     font-family: FangSong;
-    background-image: url(/imgs/github-bg2.jpg);
+    background-image: url(/imgs/black1.png);
     background-size: 400px 200px;
     color: #ffffff;
 }
 
 .left-card:hover {
-    background-image: url(/imgs/github-bg1.jpg);
+    background-image: url(/imgs/black2.png);
     background-size: 400px 200px;
 }
 
@@ -119,14 +119,13 @@
 }
 
 .right-card {
-    background-image: url(/imgs/github-bg1.jpg);
+    background-image: url(/imgs/white1.png);
     background-size: 400px 200px;
     font-family: Microsoft YaHei;
-    color: #ffffff;
 }
 
 .right-card:hover {
-    background-image: url(/imgs/github-bg2.jpg);
+    background-image: url(/imgs/white2.png);
     background-size: 400px 200px;
 }
 
@@ -167,11 +166,11 @@
 }
 
 .first-item {
-    background-image: url(/imgs/money-bg.jpg);
+    background-image: url(/imgs/green1.jpg);
 }
 
 .first-item:hover {
-    background: #64be7e;
+    background-image: url(/imgs/green2.png);
     background-size: 400px 200px;
 }
 
