@@ -39,7 +39,7 @@ export default function Home() {
           <Card className={`${style.item} ${style['first-item']}`}>
             <Flex align='center' className={`${style['intro-title']}`}><img src='imgs/money.png' style={{width: '25px', marginRight: '6px'}} /> ZenLedger</Flex>
             <div className={`${style['intro-context']}`}>基于uniapp的免登录极简记账APP</div>
-            <Flex justify='flex-end'><Button type='text' className={`${style['left-button']}`}>查看详情</Button></Flex>
+            <Flex justify='flex-end'><Button type='text' className={`${style['left-button']}`}><a href="https://www.github.com/canyyang/ZenLedger" target="_blank" rel="noopener noreferrer">查看详情</a></Button></Flex>
           </Card>
         </Flex>
         <Card className={`${style.card}  ${style['card-title']}`} style={{width: '850px'}}>📜 博客文章</Card>
