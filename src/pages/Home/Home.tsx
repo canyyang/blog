@@ -4,7 +4,7 @@ import style from './Home.module.css'
 
 const buttonText:Array<string> = ['00后', 'SCUT', '前端开发', 'ENFJ-A']
 
-const isMobile = window.innerWidth <= 768;
+const isMobile:boolean = window.innerWidth <= 768;
 console.log(isMobile)
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
       <Flex className={style.rightbox}  vertical={true} align='center'>
         <Flex justify='space-between' vertical={isMobile ? true : false} style={{width: `${isMobile ? '88vw' : '850px'}`}} align='center'>
           <Card className={`${style.card} ${style['left-card']}`}>
-            <Flex align='center' className={`${style['intro-title']}`}><img src='imgs/yang.png' style={{width: '25px', marginRight: '5px'}} /> 阿阳@canyyang</Flex>
+            <Flex align='center' className={`${style['intro-title']}`}><img src='imgs/yang.png' style={{width: '25px', marginRight: '5px'}} /> 陈灿阳@canyyang</Flex>
             <div className={`${style['intro-context']}`}>前端开发者/在读研究生/代码魔法家</div>
             <Flex justify='flex-end'><Button type='text' className={`${style['left-button']}`}>了解更多</Button></Flex>
           </Card>

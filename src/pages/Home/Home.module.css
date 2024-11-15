@@ -247,6 +247,7 @@
         flex-direction: column;
         align-items: center;
         width: 100vw;
+        background-color: #fff;
         overflow-x: hidden !important;
     }
 
