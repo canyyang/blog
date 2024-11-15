@@ -266,7 +266,7 @@
 
     .name {
         font-weight: 700;
-        font-size: 40px;
+        font-size: 36px;
     }
 
     .slogan {
@@ -322,21 +322,16 @@
         background-color: #f9f9f9;
     }
 
-    .card:hover {
-        box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
-        cursor: pointer;
-    }
-
     .intro-title {
         margin-bottom: 8px;
         font-family: SimHei;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: bold;
     }
 
     .intro-context {
         margin-bottom: 40px;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
     }
 
@@ -384,7 +379,7 @@
         display: flex;
         align-items: center;
         height: 16vw;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: bold;
         font-family: Fangzheng Cartoon, SimHei;
         background-color: #e3e8ef;
@@ -400,11 +395,6 @@
         cursor: pointer;
         color: #ffffff;
         background-size:  88vw 44vw;
-    }
-
-    .item:hover {
-        box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
-        cursor: pointer;
     }
 
     .first-item {
@@ -447,7 +437,7 @@
         text-align: center;
         line-height: 50px;
         border-radius: 7px;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 900;
         background-color: #e6e6e6;
     }
@@ -460,7 +450,7 @@
         border-radius: 8px;
         width: 88vw;
         height: 16vw;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bold;
         font-family: Microsoft YaHei;
     }
