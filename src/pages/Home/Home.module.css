@@ -98,6 +98,8 @@
     }
 
     .left-card {
+        width: 400px;
+        height: 200px;
         font-family: FangSong;
         background-image: url(/imgs/black1.png);
         background-size: 400px 200px;
@@ -121,6 +123,8 @@
     }
 
     .right-card {
+        width: 400px;
+        height: 200px;
         background-image: url(/imgs/white1.png);
         background-size: 400px 200px;
         font-family: Microsoft YaHei;
@@ -243,10 +247,12 @@
         flex-direction: column;
         align-items: center;
         width: 100vw;
+        overflow-x: hidden !important;
     }
 
     .fixbox {
         display: flex;
+        width: 96vw;
         flex-direction: column;
         align-items: center;
     }
@@ -303,7 +309,7 @@
     }
 
     .rightbox {
-        width: 100vw;
+        width: 96vw;
         padding-bottom: 20px;
     }
 
@@ -337,15 +343,10 @@
     .left-card {
         font-family: FangSong;
         background-image: url(/imgs/black1.png);
-        background-size: 400px 200px;
+        background-size: 88vw 44vw;
         color: #ffffff;
-        width: 94vw;
-        height: 47vw;
-    }
-
-    .left-card:hover {
-        background-image: url(/imgs/black2.png);
-        background-size: 94vw 47vw;
+        width: 88vw;
+        height: 44vw;
     }
 
     .left-button {
@@ -360,16 +361,11 @@
     }
 
     .right-card {
-        width: 94vw;
-        height: 47vw;
+        width: 88vw;
+        height: 44vw;
         background-image: url(/imgs/white1.png);
-        background-size: 400px 200px;
+        background-size: 88vw 44vw;
         font-family: Microsoft YaHei;
-    }
-
-    .right-card:hover {
-        background-image: url(/imgs/white2.png);
-        background-size: 94vw 47vw;
     }
 
     .right-button {
@@ -395,15 +391,15 @@
     }
 
     .item {
-        width: 94vw;
-        height: 47vw;
+        width: 88vw;
+        height: 44vw;
         margin-top: 40px;
         border: 0.5px solid #e6e6e6;
         border-radius: 8px;
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
         cursor: pointer;
         color: #ffffff;
-        background-size:  94vw 47vw;
+        background-size:  88vw 44vw;
     }
 
     .item:hover {
@@ -415,17 +411,12 @@
         background-image: url(/imgs/green1.jpg);
     }
 
-    .first-item:hover {
-        background-image: url(/imgs/green2.png);
-        background-size: 94vw 47vw;
-    }
-
     .blog {
         padding: 2vw 4vw;
         margin-top: 4vw;
         height: 24vw;
         border-radius: 7px;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
         background-color: #e6e6e6;
     }
@@ -451,7 +442,7 @@
     }
 
     .more {
-        width: 200px;
+        width: 40vw;
         height: 50px;
         text-align: center;
         line-height: 50px;
@@ -467,7 +458,7 @@
         display: flex;
         align-items: center;
         border-radius: 8px;
-        width: 94vw;
+        width: 88vw;
         height: 16vw;
         font-size: 18px;
         font-weight: bold;
