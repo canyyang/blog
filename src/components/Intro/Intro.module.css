@@ -1,0 +1,46 @@
+.father {
+    cursor: default;
+    user-select:none;
+}
+
+@media only screen and (min-width: 768px) {
+    .logo {
+        margin-bottom: 30px;
+        width: 200px;
+        height: 200px;
+        border-radius: 40%;
+    }
+
+    .name {
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    .slogan {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 40px;
+        font-family: WitchParty;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        margin-top: 10vw;
+        width: 50vw;
+        height: 50vw;
+        border-radius: 40%;
+    }
+
+    .name {
+        font-weight: 700;
+        font-size: 36px;
+    }
+
+    .slogan {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 40px;
+        font-family: WitchParty;
+    }
+}

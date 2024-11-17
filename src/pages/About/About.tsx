@@ -2,9 +2,9 @@ import { Button, Flex } from "antd";
 
 import style from './About.module.css'
 
-import intro from "../../common/intro";
+import intro from "../../common/intro"
+import tagList from "../../common/tag"
 
-const buttonText:Array<string> = ['00后', 'SCUT', '前端开发', 'ENFJ-A']
 
 export default function About() {
     return (
@@ -12,7 +12,7 @@ export default function About() {
         <Flex vertical={true} align="center">
             <img src="/imgs/avatar.jpg" className={style.avatar} />
             <Flex justify='space-between' className={style.tagList}>
-              {buttonText.map(item => (<Button
+              {tagList.map(item => (<Button
                                           className={style.tag} 
                                           key={item}
                                           type='text'>

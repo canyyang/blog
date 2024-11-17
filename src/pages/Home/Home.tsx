@@ -1,21 +1,54 @@
-import { Flex, Button, Card } from 'antd'
+import { Flex, Button, Card, message } from 'antd'
+import { useNavigate } from 'react-router-dom'
+
+import Intro from '../../components/Intro/Intro'
 
 import style from './Home.module.css'
 
-const buttonText:Array<string> = ['00后', 'SCUT', '前端开发', 'ENFJ-A']
+import blogArr from '../../common/blog'
+import tagArr from '../../common/tag'
 
-const isMobile:boolean = window.innerWidth <= 768;
-console.log(isMobile)
+type HomeProps = {
+  isMobile: boolean
+}
 
-export default function Home() {
+interface InforObject {
+  [key: string]: string;
+}
+
+const infor:InforObject = {
+  '邮箱': 'canyangchen@126.com',
+  'QQ': '2357873118'
+}
+
+export default function Home({isMobile}:HomeProps) {
+  const [messageApi, contextHolder] = message.useMessage();
+
+  const navigate = useNavigate();
+
+  const goPath = (path:string) => {
+    navigate(path);
+  };
+
+  const copyMessage = async (type: string) => {
+    try {
+      await navigator.clipboard.writeText(infor[type]);
+      messageApi.open({
+        type: 'success',
+        content: `${type}号已保存到剪贴板`,
+      });
+    } catch (err) {
+      console.error('复制失败', err);
+    }
+  };
+  
   return (
     <Flex className={style.container}>
+      {contextHolder}
       <Flex className={style.fixbox} vertical={true} align='center' style={{top: '100px'}}>
-        <img className={style.logo} src="/imgs/avatar.jpg" />
-        <span className={style.name}>canyyang</span>
-        <span className={style.slogan}>Magic within you prevails</span>
+        <Intro />
         <Flex justify='space-between' className={style.tagList}>
-          {buttonText.map(item => (<Button
+          {tagArr.map(item => (<Button
                                       className={style.tag} 
                                       key={item}
                                       type='text'>
@@ -29,7 +62,7 @@ export default function Home() {
           <Card className={`${style.card} ${style['left-card']}`}>
             <Flex align='center' className={`${style['intro-title']}`}><img src='imgs/yang.png' style={{width: '25px', marginRight: '5px'}} /> 陈灿阳@canyyang</Flex>
             <div className={`${style['intro-context']}`}>前端开发者/在读研究生/代码魔法家</div>
-            <Flex justify='flex-end'><Button type='text' className={`${style['left-button']}`}>了解更多</Button></Flex>
+            <Flex justify='flex-end'><Button type='text' className={`${style['left-button']}`} onClick={() => goPath('/about')}>了解更多</Button></Flex>
           </Card>
           <Card className={`${style.card}  ${style['right-card']}`}>
             <Flex align='center' className={`${style['intro-title']}`}><img src='imgs/github.png' style={{width: '23px', marginRight: '5px'}} />代码仓库</Flex>
@@ -47,22 +80,20 @@ export default function Home() {
         </Flex>
         <Card className={`${style.card}  ${style['card-title']}`} style={{width: `${isMobile ? '88vw' : '850px'}`}}>📜 博客文章</Card>
         <Card className={`${style.card}`} style={{width: `${isMobile ? '88vw' : '850px'}`}}>
-          <Flex vertical={isMobile ? true : false} align={isMobile ? 'stretch' : 'center' } justify='space-between' className={style.blog}>
-            <span className={`${style['blog-title']}`}>2024年度总结：欲买桂花同载酒</span>
-            <span className={`${style['blog-time']}`}>2024.11.14</span>
+          {blogArr.map(item => (
+            <Flex vertical={isMobile ? true : false} align={isMobile ? 'stretch' : 'center' } justify='space-between' className={style.blog}>
+            <span className={`${style['blog-title']}`}>{item.title}</span>
+            <span className={`${style['blog-time']}`}>{item.time}</span>
           </Flex>
-          <Flex vertical={isMobile ? true : false} align={isMobile ? 'stretch' : 'center' } justify='space-between' className={style.blog}>
-            <span className={`${style['blog-title']}`}>2024年度总结：终不似，少年游</span>
-            <span className={`${style['blog-time']}`}>2024.11.14</span>
-          </Flex>
+          ))}
           <Flex align='center' justify='flex-end' className={`${style['blog-more']}`}>
-            <div className={style.more}>查看更多</div>
+            <div className={style.more} onClick={() => goPath('/blog')}>查看更多</div>
           </Flex>
         </Card>
         <Card className={`${style.card}  ${style['card-title']}`} style={{width: `${isMobile ? '88vw' : '850px'}`}}>📞 与我联系</Card>
         <Flex justify='space-between' vertical={isMobile ? true : false} style={{width: `${isMobile ? '88vw' : '850px'}`}}>
-          <Flex className={`${style.card}  ${style['contact']}`}><div className={`${style['contact-img']}`} style={{backgroundPosition: '0 0'}}></div><span> Email: canyangchen@126.com</span></Flex>
-          <Flex className={`${style.card}  ${style['contact']}`}><div className={`${style['contact-img']}`} style={{backgroundPosition: '-32px 0'}}></div><span> QQ: 2357873118</span></Flex>
+          <Flex onClick={() => copyMessage('邮箱')} className={`${style.card}  ${style['contact']}`}><div className={`${style['contact-img']}`} style={{backgroundPosition: '0 0'}}></div><span> Email: canyangchen@126.com</span></Flex>
+          <Flex onClick={() => copyMessage('QQ')} className={`${style.card}  ${style['contact']}`}><div className={`${style['contact-img']}`} style={{backgroundPosition: '-32px 0'}}></div><span> QQ: 2357873118</span></Flex>
         </Flex>
       </Flex>
       <Flex vertical={true} align='center' className={style.fixbox} style={{bottom: '15px'}}>
