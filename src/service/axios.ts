@@ -2,7 +2,7 @@ import axios, { AxiosInstance, AxiosResponse } from 'axios';
 
 // 创建 Axios 实例，设置基础配置
 const axiosInstance: AxiosInstance = axios.create({
-  baseURL: 'http://120.77.36.205:3000', // 替换为你的 API 基础 URL
+  baseURL: 'https://120.77.36.205:3000', // 替换为你的 API 基础 URL
   timeout: 10000, // 请求超时时间
   headers: {
     'Content-Type': 'application/json',
