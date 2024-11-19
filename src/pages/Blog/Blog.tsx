@@ -1,47 +1,57 @@
-import { Flex, Timeline } from 'antd';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'
+import { Flex, Timeline } from 'antd'
 
-import { BlogItem } from '../../common/blog';
-import blog from '../../common/blog';
-
+import { getList } from '../../service/request'
 import style from './Blog.module.css'
-
 import Intro from '../../components/Intro/Intro'
+import { TimeItem, PageProps, BlogItem } from '../../types/type';
 
-interface TimeItem {
-    color?: string,
-    children: JSX.Element
-}
+export default function Blog({isMobile}:PageProps) {
+    const [blog, setBlog] = useState<BlogItem[]>([]);
+    let currentYear = '';
 
-type BlogProps = {
-    isMobile: boolean
-}
+    const navigate = useNavigate();
+    const goArticle = (id:string) => {
+        navigate(`/article?id=${id}`);
+    };
 
-let currentYear:string = blog[0].time.slice(0, 4);
+    useEffect(() => {
+        const fetchBlogData = async () => {
+          try {
+            const data = await getList();
+            setBlog(data);
+            currentYear = data[0].time.slice(0, 4);
+          } catch (err) {
+            console.log(err)
+          }
+        };
+    
+        fetchBlogData(); // 自动请求数据
+      }, []);
 
-const blogArr = blog.reduce<Array<TimeItem>>((timeArr:Array<TimeItem>, item:BlogItem) => {
-    let year:string = item.time.slice(0, 4);
-    if (!timeArr.length || currentYear != year) {
-        currentYear = year
+    const blogArr = blog.reduce<Array<TimeItem>>((timeArr:Array<TimeItem>, item:BlogItem) => {
+
+        let year:string = item.time.slice(0, 4);
+        if (!timeArr.length || currentYear != year) {
+            currentYear = year;
+            timeArr.push({
+                color: 'gray',
+                children: (<span className={style.year}>{year}</span>)
+            })
+        }
         timeArr.push({
-            color: 'gray',
-            children: (<span className={style.year}>{year}</span>)
+            children: (
+                        <div>
+                            <span className={style.time}>{item.time.slice(5)}</span>
+                            <span className={style.title} onClick={() => {goArticle(item.id)}}>{item.title}</span>
+                        </div>)
         })
-    }
-    timeArr.push({
-        children: (
-                    <div>
-                        <span className={style.time}>{item.time.slice(5)}</span>
-                        <span className={style.title}>{item.title}</span>
-                    </div>)
-    })
-    return timeArr
-}, [])
+        return timeArr
+    }, [])
 
-
-export default function Blog({isMobile}:BlogProps) {
     return (
         <Flex>
-            {/* <Flex justify='center' align='center' className={style.header}>CANYYANG</Flex> */}
             <Flex vertical={true} className={style.leftbox}><Timeline items={blogArr} className={style['time-line']}/></Flex>
             {!isMobile && (<Flex className={style.rightbox} vertical={true} align='center'><Intro /></Flex>)}
         </Flex>

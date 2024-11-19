@@ -12,3 +12,25 @@ div {
     font-family: WitchParty;
     src: url('/fonts/WitchParty.ttf');
 }
+
+/* 动画定义 */
+/* 动画：页面从中间逐渐放大且淡入 */
+.fade-scale-enter {
+    opacity: 0;
+    transform: scale(0.8);
+}
+.fade-scale-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 500ms, transform 500ms;
+}
+.fade-scale-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.fade-scale-exit-active {
+  opacity: 0;
+  transform: scale(1.2);
+  transition: opacity 500ms, transform 500ms;
+}
+  

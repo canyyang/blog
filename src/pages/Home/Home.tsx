@@ -1,34 +1,45 @@
+import { useState, useEffect } from 'react';
 import { Flex, Button, Card, message } from 'antd'
 import { useNavigate } from 'react-router-dom'
 
 import Intro from '../../components/Intro/Intro'
-
+import { getList } from '../../service/request'
 import style from './Home.module.css'
-
-import blogArr from '../../common/blog'
 import tagArr from '../../common/tag'
+import { PageProps, InforObject, BlogItem } from '../../types/type';
 
-type HomeProps = {
-  isMobile: boolean
-}
-
-interface InforObject {
-  [key: string]: string;
-}
 
 const infor:InforObject = {
   '邮箱': 'canyangchen@126.com',
   'QQ': '2357873118'
 }
 
-export default function Home({isMobile}:HomeProps) {
-  const [messageApi, contextHolder] = message.useMessage();
+export default function Home({isMobile}:PageProps) {
+  const [messageApi, contextHolder] = message.useMessage()
+  const [blogArr, setBlogArr] = useState<BlogItem[]>([])
 
   const navigate = useNavigate();
 
   const goPath = (path:string) => {
     navigate(path);
   };
+
+  const goArticle = (id:string) => {
+    navigate(`/article?id=${id}`);
+  };
+
+  useEffect(() => {
+    const fetchBlogData = async () => {
+      try {
+        const data = await getList();
+        setBlogArr(data.slice(0, 5));
+      } catch (err) {
+        console.log(err)
+      }
+    };
+
+    fetchBlogData(); // 自动请求数据
+  }, []);
 
   const copyMessage = async (type: string) => {
     try {
@@ -81,7 +92,7 @@ export default function Home({isMobile}:HomeProps) {
         <Card className={`${style.card}  ${style['card-title']}`} style={{width: `${isMobile ? '88vw' : '850px'}`}}>📜 博客文章</Card>
         <Card className={`${style.card}`} style={{width: `${isMobile ? '88vw' : '850px'}`}}>
           {blogArr.map(item => (
-            <Flex vertical={isMobile ? true : false} align={isMobile ? 'stretch' : 'center' } justify='space-between' className={style.blog}>
+            <Flex vertical={isMobile ? true : false} align={isMobile ? 'stretch' : 'center' } justify='space-between' className={style.blog} onClick={() => {goArticle(item.id)}}>
             <span className={`${style['blog-title']}`}>{item.title}</span>
             <span className={`${style['blog-time']}`}>{item.time}</span>
           </Flex>
