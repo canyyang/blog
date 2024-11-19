@@ -92,7 +92,7 @@ export default function Home({isMobile}:PageProps) {
         <Card className={`${style.card}  ${style['card-title']}`} style={{width: `${isMobile ? '88vw' : '850px'}`}}>📜 博客文章</Card>
         <Card className={`${style.card}`} style={{width: `${isMobile ? '88vw' : '850px'}`}}>
           {blogArr.map(item => (
-            <Flex vertical={isMobile ? true : false} align={isMobile ? 'stretch' : 'center' } justify='space-between' className={style.blog} onClick={() => {goArticle(item.id)}}>
+            <Flex vertical={isMobile ? true : false} align={isMobile ? 'stretch' : 'center' } justify='space-between' className={style.blog} onClick={() => {goArticle(item.id)}} key={item.id}>
             <span className={`${style['blog-title']}`}>{item.title}</span>
             <span className={`${style['blog-time']}`}>{item.time}</span>
           </Flex>
