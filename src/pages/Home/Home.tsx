@@ -72,7 +72,7 @@ export default function Home({isMobile}:PageProps) {
         <Flex justify='space-between' vertical={isMobile ? true : false} style={{width: `${isMobile ? '88vw' : '850px'}`}} align='center'>
           <Card className={`${style.card} ${style['left-card']}`}>
             <Flex align='center' className={`${style['intro-title']}`}><img src='imgs/yang.png' style={{width: '25px', marginRight: '5px'}} /> 陈灿阳@canyyang</Flex>
-            <div className={`${style['intro-context']}`}>前端开发者/在读研究生/代码魔法家</div>
+            <div className={`${style['intro-context']}`}>前端开发者/在读研究生/CV魔法师</div>
             <Flex justify='flex-end'><Button type='text' className={`${style['left-button']}`} onClick={() => goPath('/about')}>了解更多</Button></Flex>
           </Card>
           <Card className={`${style.card}  ${style['right-card']}`}>
