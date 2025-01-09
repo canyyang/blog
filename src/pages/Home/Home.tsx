@@ -82,10 +82,25 @@ export default function Home({isMobile}:PageProps) {
           </Card>
         </Flex>
         <Card className={`${style.card}  ${style['card-title']}`} style={{width: `${isMobile ? '88vw' : '850px'}`}}>🔧 个人项目</Card>
-        <Flex vertical={isMobile ? true : false} justify='space-between' style={{width: `${isMobile ? '88vw' : '850px'}`}}>
+        <Flex vertical={isMobile ? true : false} wrap justify='space-between' style={{width: `${isMobile ? '88vw' : '850px'}`}}>
           <Card className={`${style.item} ${style['first-item']}`}>
-            <Flex align='center' className={`${style['intro-title']}`}><img src='imgs/money.png' style={{width: '25px', marginRight: '6px'}} /> ZenLedger</Flex>
-            <div className={`${style['intro-context']}`}>基于uniapp的免登录极简记账APP</div>
+            <Flex align='center' className={`${style['intro-title']}`}>CANYYANG</Flex>
+            <div className={`${style['intro-context']}`}>基于React+TypeScript+Antd的个人网站</div>
+            <Flex justify='flex-end'><Button type='text' className={`${style['left-button']}`}><a href="https://www.github.com/canyyang/ZenLedger" target="_blank" rel="noopener noreferrer">查看详情</a></Button></Flex>
+          </Card>
+          <Card className={`${style.item} ${style['second-item']}`}>
+            <Flex align='center' className={`${style['intro-title']}`}>YunHan</Flex>
+            <div className={`${style['intro-context']}`}>基于Vue 3.0+Element UI的家教管理平台</div>
+            <Flex justify='flex-end'><Button type='text' className={`${style['left-button']}`}><a href="https://www.github.com/canyyang/yunhan" target="_blank" rel="noopener noreferrer">查看详情</a></Button></Flex>
+          </Card>
+          <Card className={`${style.item} ${style['third-item']}`}>
+            <Flex align='center' className={`${style['intro-title']}`}>YunServer</Flex>
+            <div className={`${style['intro-context']}`}>基于NodeJS+MongoDB的家教管理API系统</div>
+            <Flex justify='flex-end'><Button type='text' className={`${style['left-button']}`}><a href="https://www.github.com/canyyang/ZenLedger" target="_blank" rel="noopener noreferrer">查看详情</a></Button></Flex>
+          </Card>
+          <Card className={`${style.item} ${style['fourth-item']}`}>
+            <Flex align='center' className={`${style['intro-title']}`}>ZenLedger</Flex>
+            <div className={`${style['intro-context']}`}>基于uniapp+uCharts的极简记账APP</div>
             <Flex justify='flex-end'><Button type='text' className={`${style['left-button']}`}><a href="https://www.github.com/canyyang/ZenLedger" target="_blank" rel="noopener noreferrer">查看详情</a></Button></Flex>
           </Card>
         </Flex>
