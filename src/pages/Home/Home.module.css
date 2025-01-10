@@ -366,9 +366,28 @@
         color: #ffffff;
         background-size:  88vw;
     }
-
+    .item:hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.2); /* 半透明遮罩层 */
+        z-index: 1; /* 确保遮罩层在元素上面 */
+      }
     .first-item {
-        background-image: url(/imgs/green1.jpg);
+        background-color: #2c3e50;
+    }
+    /* .first-item */
+    .second-item {
+        background-color: #c20b0d;
+    }
+    .third-item {
+        background-color: #2cbb00;
+    }
+    .fourth-item {
+        background-color: #0275d2;
     }
 
     .blog {
