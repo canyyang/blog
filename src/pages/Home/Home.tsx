@@ -85,7 +85,7 @@ export default function Home({isMobile}:PageProps) {
         <Flex vertical={isMobile ? true : false} wrap justify='space-between' style={{width: `${isMobile ? '88vw' : '850px'}`}}>
           <Card className={`${style.item} ${style['first-item']}`}>
             <Flex align='center' className={`${style['intro-title']}`}>CANYYANG</Flex>
-            <div className={`${style['intro-context']}`}>基于React+TypeScript+Antd+Express的个人网站</div>
+            <div className={`${style['intro-context']}`}>基于React+TypeScript+Antd的个人网站</div>
             <Flex justify='flex-end'><Button type='text' className={`${style['left-button']}`}><a href="https://www.github.com/canyyang/ZenLedger" target="_blank" rel="noopener noreferrer">查看详情</a></Button></Flex>
           </Card>
           <Card className={`${style.item} ${style['second-item']}`}>
@@ -100,7 +100,7 @@ export default function Home({isMobile}:PageProps) {
           </Card>
           <Card className={`${style.item} ${style['fourth-item']}`}>
             <Flex align='center' className={`${style['intro-title']}`}>ZenLedger</Flex>
-            <div className={`${style['intro-context']}`}>基于UniApp+Vue 3.0+uCharts的极简记账APP</div>
+            <div className={`${style['intro-context']}`}>基于UniApp+uCharts的极简记账APP</div>
             <Flex justify='flex-end'><Button type='text' className={`${style['left-button']}`}><a href="https://www.github.com/canyyang/ZenLedger" target="_blank" rel="noopener noreferrer">查看详情</a></Button></Flex>
           </Card>
         </Flex>
