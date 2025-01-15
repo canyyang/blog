@@ -161,19 +161,6 @@
         background-color: rgba(0, 0, 0, 0.2); /* 半透明遮罩层 */
         z-index: 1; /* 确保遮罩层在元素上面 */
       }
-    .first-item {
-        background-color: #2c3e50;
-    }
-    /* .first-item */
-    .second-item {
-        background-color: #c20b0d;
-    }
-    .third-item {
-        background-color: #2cbb00;
-    }
-    .fourth-item {
-        background-color: #0275d2;
-    }
 
     .blog {
         padding: 0 30px;
@@ -376,19 +363,6 @@
         background-color: rgba(0, 0, 0, 0.2); /* 半透明遮罩层 */
         z-index: 1; /* 确保遮罩层在元素上面 */
       }
-    .first-item {
-        background-color: #2c3e50;
-    }
-    /* .first-item */
-    .second-item {
-        background-color: #c20b0d;
-    }
-    .third-item {
-        background-color: #2cbb00;
-    }
-    .fourth-item {
-        background-color: #0275d2;
-    }
 
     .blog {
         padding: 2vw 4vw;
@@ -456,4 +430,18 @@
         height: 32px;
         margin-right: 6.6px;
     }
+}
+
+.first-item {
+    background-color: #7A8084;
+}
+/* .first-item */
+.second-item {
+    background-color: #D1A7B8;
+}
+.third-item {
+    background-color: #B3C1A8;
+}
+.fourth-item {
+    background-color: #D0B7A1;
 }
