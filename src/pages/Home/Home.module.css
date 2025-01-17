@@ -23,7 +23,7 @@
         width: 30vw;
         min-width: 350px;
         cursor: default;
-        width: 400px;
+        width: 450px;
         height: 200px;
     }
 
@@ -79,17 +79,17 @@
     }
 
     .left-card {
-        width: 400px;
+        width: 450px;
         height: 200px;
         font-family: FangSong;
         background-image: url(/imgs/black1.png);
-        background-size: 400px 200px;
+        background-size: 450px 200px;
         color: #ffffff;
     }
 
     .left-card:hover {
         background-image: url(/imgs/black2.png);
-        background-size: 400px 200px;
+        background-size: 450px 200px;
     }
 
     .left-button {
@@ -104,16 +104,16 @@
     }
 
     .right-card {
-        width: 400px;
+        width: 450px;
         height: 200px;
         background-image: url(/imgs/white1.png);
-        background-size: 400px 200px;
+        background-size: 450px 200px;
         font-family: Microsoft YaHei;
     }
 
     .right-card:hover {
         background-image: url(/imgs/white2.png);
-        background-size: 400px 200px;
+        background-size: 450px 200px;
     }
 
     .right-button {
@@ -136,7 +136,7 @@
     }
 
     .item {
-        width: 400px;
+        width: 450px;
         height: 200px;
         margin-top: 40px;
         border: 0.5px solid #e6e6e6;
@@ -144,7 +144,6 @@
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
         cursor: pointer;
         color: #ffffff;
-        background-size:  400px 200px;
     }
 
     .item:hover {
@@ -202,7 +201,7 @@
         display: flex;
         align-items: center;
         border-radius: 8px;
-        width: 400px;
+        width: 450px;
         height: 90px;
         font-size: 18px;
         font-weight: bold;

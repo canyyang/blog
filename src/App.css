@@ -8,6 +8,10 @@ div {
     box-sizing: border-box;
 }
 
+a {
+  z-index: 100;
+}
+
 @font-face {
     font-family: WitchParty;
     src: url('/fonts/WitchParty.ttf');
