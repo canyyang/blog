@@ -96,7 +96,7 @@ export default function Home({isMobile}:PageProps) {
           <Card className={`${style.item} ${style['third-item']}`}>
             <Flex align='center' className={`${style['intro-title']}`}>YunServer</Flex>
             <div className={`${style['intro-context']}`}>基于EggJS+MongoDB的家教管理API系统</div>
-            <Flex justify='flex-end'><Button type='text' className={`${style['left-button']}`}><a href="https://www.github.com/canyyang/ZenLedger" target="_blank" rel="noopener noreferrer">查看详情</a></Button></Flex>
+            <Flex justify='flex-end'><Button type='text' className={`${style['left-button']}`}><a href="https://www.github.com/canyyang/YunServer" target="_blank" rel="noopener noreferrer">查看详情</a></Button></Flex>
           </Card>
           <Card className={`${style.item} ${style['fourth-item']}`}>
             <Flex align='center' className={`${style['intro-title']}`}>ZenLedger</Flex>
